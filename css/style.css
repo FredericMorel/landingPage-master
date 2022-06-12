@@ -1,0 +1,169 @@
+@import "header.css" screen;
+@import url(services.css) screen;
+@import "footer.css";
+@import "hero.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
+
+:root {
+  /* --purple:#814096; */
+  --purple: #050093;
+  --pink: #3292f8;
+
+  /*    --pink:#F83292; */
+  --gradient: linear-gradient(90deg, var(--purple), var(--pink));
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  /* text-transform: capitalize; */
+}
+
+*::selection {
+  background: var(--pink);
+  color: #fff;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: #f9f9f9;
+  max-width: 100vw;
+  margin: auto;
+}
+
+/* media queries  */
+
+@media (max-width: 1886px) {
+  body {
+    max-width: 100vw;
+  }
+
+  .content {
+    position: absolute;
+    max-width: 400px;
+    left: 300px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 8px;
+  }
+  .image {
+    margin-right: 18px;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+    width: 100%;
+  }
+
+  body {
+    max-width: 100vw;
+  }
+
+  .content {
+    position: relative;
+    max-width: 350px;
+    left: 200px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 991px) {
+  section {
+    padding: 0 3%;
+    padding-top: 7.5rem;
+    padding-bottom: 2rem;
+  }
+  body {
+    max-width: 100vw;
+  }
+}
+
+@media (max-width: 768px) {
+  header label {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 1rem 2rem;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: 0.2s linear;
+  }
+
+  header .navbar a {
+    display: block;
+    margin: 2rem 0;
+    font-size: 2rem;
+  }
+
+  header input:checked ~ .navbar {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  header input:checked ~ label::before {
+    content: "\f00d";
+  }
+
+  .home {
+    flex-flow: column-reverse;
+  }
+
+  .home .image img {
+    width: 100%;
+  }
+
+  .home .content h3 {
+    font-size: 3.6rem;
+  }
+
+  .home .content p {
+    font-size: 1.5rem;
+  }
+
+  .about {
+    background-position: right;
+  }
+
+  .newsletter p {
+    width: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .about .column .content .buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about .column .content .buttons a:last-child {
+    margin: 1rem 0;
+  }
+}

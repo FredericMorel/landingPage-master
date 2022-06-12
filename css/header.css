@@ -1,0 +1,77 @@
+.heading {
+  text-align: center;
+  background: var(--gradient);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+header .logo {
+  /*  display: inline; */
+  margin-top: -10px;
+  font-size: 2rem;
+  color: var(--purple);
+
+  vertical-align: bottom;
+}
+header .logo:hover {
+  color: var(--pink);
+}
+
+.logo-span {
+  position: relative;
+  margin-right: -12px;
+  top: 4px;
+}
+
+header .logo span {
+  color: var(--pink);
+}
+header .logo span:hover {
+  color: var(--purple);
+}
+.logo-span img {
+  height: 30px;
+}
+
+.navbar {
+  margin-right: 28px;
+}
+header .navbar a {
+  font-size: 1.7rem;
+  margin-left: 2rem;
+  color: var(--purple);
+}
+
+header .navbar a:hover {
+  color: var(--pink);
+}
+
+header input {
+  display: none;
+}
+
+header label {
+  font-size: 3rem;
+  color: var(--purple);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+}
